@@ -1,0 +1,28 @@
+#!/bin/bash
+if [[ -z "$NETWORK" ]]; then
+  echo "[Error] Cannot obtain NETWORK env variable"
+  exit 1
+
+elif [[ "$NETWORK" == "mainnet" ]]; then
+  exec /run-network-config/cardano-node-mainnet $@
+
+elif [[ "$NETWORK" == "marlowe-pioneers" ]]; then
+  exec /run-network-config/cardano-node-marlowe-pioneers $@
+
+elif [[ "$NETWORK" == "p2p" ]]; then
+  exec /run-network-config/cardano-node-p2p $@
+
+elif [[ "$NETWORK" == "preprod" ]]; then
+  exec /run-network-config/cardano-node-preprod $@
+
+elif [[ "$NETWORK" == "preview" ]]; then
+  exec /run-network-config/cardano-node-preview $@
+
+elif [[ "$NETWORK" == "testnet" ]]; then
+  exec /run-network-config/cardano-node-testnet $@
+
+else
+  echo "[Error] Managed configuration for network "$NETWORK" does not exist"
+  exit 1
+fi
+

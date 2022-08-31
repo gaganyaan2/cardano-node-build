@@ -1,0 +1,27 @@
+#!/bin/bash
+set -euo pipefail
+mkdir -p "$(dirname "/ipc/node.socket")"
+echo "Starting: cardano-node run"
+   echo "--config /run-network-config/cardano-node-p2p-config-0-0.json"
+   echo "--database-path /data/db"
+   echo "--topology /run-network-config/cardano-node-p2p-topology.yaml"
+   echo "--host-addr 0.0.0.0"
+   echo "--port 3001"
+   echo "--socket-path /ipc/node.socket"
+   echo ""
+   echo ""
+   echo ""
+   echo ""
+   echo ""
+   echo "+RTS"
+   echo "-N2"
+   echo "-I0"
+   echo "-A16m"
+   echo "-qg"
+   echo "-qb"
+   echo "--disable-delayed-os-memory-return"
+   echo "-RTS"
+echo "..or, once again, in a single line:"
+echo "cardano-node run --config /run-network-config/cardano-node-p2p-config-0-0.json --database-path /data/db --topology /run-network-config/cardano-node-p2p-topology.yaml --host-addr 0.0.0.0 --port 3001 --socket-path /ipc/node.socket      +RTS -N2 -I0 -A16m -qg -qb --disable-delayed-os-memory-return -RTS"
+
+exec cardano-node run --config /run-network-config/cardano-node-p2p-config-0-0.json --database-path /data/db --topology /run-network-config/cardano-node-p2p-topology.yaml --host-addr 0.0.0.0 --port 3001 --socket-path /ipc/node.socket      +RTS -N2 -I0 -A16m -qg -qb --disable-delayed-os-memory-return -RTS $@
