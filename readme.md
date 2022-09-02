@@ -42,6 +42,10 @@ docker build --build-arg git_tag='tags/1.35.3' -t cardano-node:1.35.3 -f arm64.D
 
 # Run
 docker run -e NETWORK=preview -it cardano-node:<tag>
+
+# Use already build image
+docker run -e NETWORK=preview -it koolwithk/cardano-node:1.35.5-arm64
+
 ```
 **Note :** It took around 11 Hours to build the cardano-node image on Raspberry pi4.
 
