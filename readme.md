@@ -32,7 +32,7 @@ sysctl vm.swappiness=60
 echo "/swapfile swap swap defaults 0 0" >>  /etc/fstab
 ```
 
-2. Build arm64 docker image
+### Build arm64 cardano-node docker image
 
 ```bash
 # Build
