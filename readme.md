@@ -4,6 +4,10 @@ Build your own cardano node image
 
 ```bash
 # Build
+git clone https://github.com/koolwithk/cardano-node-build.git
+
+cd cardano-node-build
+
 docker build -t cardano-node:<tag> -f Dockerfile .
 
 docker build --build-arg git_tag='tags/1.35.3' -t cardano-node:1.35.3 -f Dockerfile .
@@ -40,6 +44,10 @@ echo "/swapfile swap swap defaults 0 0" >>  /etc/fstab
 
 ```bash
 # Build
+git clone https://github.com/koolwithk/cardano-node-build.git
+
+cd cardano-node-build
+
 docker build -t cardano-node:<tag> -f arm64.Dockerfile .
 
 docker build --build-arg git_tag='tags/1.35.3' -t cardano-node:1.35.3 -f arm64.Dockerfile .
