@@ -10,7 +10,7 @@ cd cardano-node-build
 
 docker build -t cardano-node:<tag> -f Dockerfile .
 
-docker build --build-arg git_tag='tags/1.35.3' -t cardano-node:1.35.3 -f Dockerfile .
+docker build --build-arg git_commit_id='tags/1.35.3' -t cardano-node:1.35.3 -f Dockerfile .
 
 # Run
 docker run -e NETWORK=preview -it cardano-node:<tag>
@@ -18,6 +18,12 @@ docker run -e NETWORK=preview -it cardano-node:<tag>
 # Use already build image
 docker run -e NETWORK=preview -it koolwithk/cardano-node:1.35.3
 
+```
+
+### Run using docker compose
+
+```bash
+NETWORK=preview docker compose -f cardano-compose.yml up -d
 ```
 
 ## Cardano node docker image build on Raspberry pi 4
@@ -50,7 +56,7 @@ cd cardano-node-build
 
 docker build -t cardano-node:<tag> -f arm64.Dockerfile .
 
-docker build --build-arg git_tag='tags/1.35.3' -t cardano-node:1.35.3 -f arm64.Dockerfile .
+docker build --build-arg git_commit_id='tags/1.35.3' -t cardano-node:1.35.3 -f arm64.Dockerfile .
 
 # Run
 docker run -e NETWORK=preview -it cardano-node:<tag>
