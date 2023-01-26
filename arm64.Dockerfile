@@ -43,6 +43,7 @@ RUN echo 'package cardano-crypto-praos' >> cabal.project.local
 RUN echo ' flags: -external-libsodium-vrf' >> cabal.project.local
 RUN echo "with-compiler: ghc-${BOOTSTRAP_HASKELL_GHC_VERSION}" >> cabal.project.local
 RUN apt install llvm -y
+RUN PATH="$PATH:/root/.ghcup/bin/" cabal update
 RUN PATH="$PATH:/root/.ghcup/bin/" cabal build all --disable-tests
 RUN mkdir -p ~/.local/bin
 RUN cp -p "$(./scripts/bin-path.sh cardano-node)" ~/.local/bin/
