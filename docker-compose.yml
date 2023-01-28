@@ -2,7 +2,7 @@ version: "3.5"
 services:
   cardano-node:
     build: .
-    #image: koolwithk/cardano-node:1.35.3
+    #image: koolwithk/cardano-node:1.35.5
     environment:
       NETWORK:
       CARDANO_NODE_SOCKET_PATH: "/ipc/node.socket"
