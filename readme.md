@@ -8,14 +8,14 @@ git clone https://github.com/koolwithk/cardano-node-build.git
 
 cd cardano-node-build
 
-docker build --build-arg git_commit_id='tags/1.35.3' -t cardano-node:<tag> -f Dockerfile .
+docker build --build-arg git_commit_id='tags/1.35.5' -t cardano-node:<tag> -f Dockerfile .
 #update git_commit_id and tag as per your requirement.
 
 # Run
 docker run -e NETWORK=preview -it cardano-node:<tag>
 
 # Use already build image
-docker run -e NETWORK=preview -it koolwithk/cardano-node:1.35.3
+docker run -e NETWORK=preview -it koolwithk/cardano-node:1.35.5
 
 ```
 
@@ -55,14 +55,14 @@ cd cardano-node-build
 
 docker build -t cardano-node:<tag> -f arm64.Dockerfile .
 
-docker build --build-arg git_commit_id='tags/1.35.3' -t cardano-node:<tag> -f arm64.Dockerfile .
+docker build --build-arg git_commit_id='tags/1.35.5' -t cardano-node:<tag> -f arm64.Dockerfile .
 #update git_commit_id and tag as per your requirement.
 
 # Run
 docker run -e NETWORK=preview -it cardano-node:<tag>
 
 # Use already build image
-docker run -e NETWORK=preview -it koolwithk/cardano-node:1.35.3-arm64
+docker run -e NETWORK=preview -it koolwithk/cardano-node:1.35.5-arm64
 
 ```
 **Note :** It took around 11 Hours to build the cardano-node image on Raspberry pi4.

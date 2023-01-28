@@ -33,7 +33,8 @@ RUN make && make install && make clean
 RUN ldconfig
 
 FROM secp256k1 AS cardano-node
-ARG git_commit_id='tags/1.35.3'
+#ARG git_commit_id='tags/1.35.5'
+ARG git_commit_id
 WORKDIR /root/src
 RUN git clone https://github.com/input-output-hk/cardano-node.git
 WORKDIR /root/src/cardano-node
