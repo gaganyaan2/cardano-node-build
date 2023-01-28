@@ -80,3 +80,7 @@ OS killed a process using lots of memory).
 - https://github.com/input-output-hk/cardano-node/blob/master/doc/getting-started/install.md/
 - https://developers.cardano.org/docs/get-started/installing-cardano-node/
 - https://www.coincashew.com/coins/overview-ada/guide-how-to-build-a-haskell-stakepool-node
+
+### Alternatives:
+- https://github.com/jterrier84/Cardano-node-docker
+- https://github.com/armada-alliance/cardano-node-binaries/tree/main/static-binaries
