@@ -76,6 +76,14 @@ typical reason for this is that there is not enough memory available (e.g. the
 OS killed a process using lots of memory).
 ```
 
+#### raspberry pi4 cardano node sync status
+
+| Network   |      Status      |  Reason |
+|----------|:-------------:|------:|
+| mainnet |  Stuck | Stuck at epoc 317. Tried with 16GB swap.| 
+| preprod | Test Pending     |    |
+| preview | Test Pending |     |
+
 ### Refrences:
 - https://github.com/input-output-hk/cardano-node/blob/master/doc/getting-started/install.md/
 - https://developers.cardano.org/docs/get-started/installing-cardano-node/
